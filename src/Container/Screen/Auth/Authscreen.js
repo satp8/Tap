@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import bgimg from '../../../../asset/pub.jpg';
+import bgimg from '../../../assets/pub.jpg';
 
 class Signup extends Component {
   render() {
@@ -18,9 +18,11 @@ class Signup extends Component {
             buttonStyle={[styles.inputStyle, { backgroundColor: '#1dd1a1' }]}
             title="LOG IN"
             titleStyle={{
+              flex:1,
               marginLeft: 30,
               fontWeight: 'bold',
             }}
+            onPress={() => this.props.navigation.navigate('AppStack')}
             icon={
               <Icon
                 name="arrow-right"

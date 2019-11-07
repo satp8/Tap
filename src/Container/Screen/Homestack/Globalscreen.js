@@ -8,49 +8,49 @@ class Globalscreen extends Component {
       {
         id: 1,
         name: 'junior Leagues',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 2,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 3,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 4,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 5,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 6,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 7,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 8,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
     ];
@@ -65,7 +65,7 @@ class Globalscreen extends Component {
                   <View
                     style={styles.heroImageContainer}>
                     <Image
-                      source={require('../../../../asset/call.jpg')}
+                      source={require('../../../assets/call.jpg')}
                       style={[styles.heroImageMain, styles.heroImage]}
                     />
                   </View>
