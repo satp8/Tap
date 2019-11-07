@@ -9,44 +9,43 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-
 class Localscreen extends Component {
   render() {
     const Data = [
       {
         id: 1,
         name: 'junior Leagues',
-        avatar: './',
+        avatar: '../../../assets/cal.jpg',
         subtitle: 'adventure',
       },
       {
         id: 2,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 3,
         name: 'junior Leagues',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 4,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 4,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
       {
         id: 4,
         name: 'brynn',
-        avatar: '../../../../asset/call.jpg',
+        avatar: '../../../assets/call.jpg',
         subtitle: 'adventure',
       },
     ];
@@ -57,7 +56,7 @@ class Localscreen extends Component {
           <View style={styles.appContainer}>
             <View style={styles.heroImageContainer}>
               <Image
-                source={require('../../../../asset/call.jpg')}
+                source={require('../../../assets/call.jpg')}
                 style={[styles.heroImage, styles.heroImageMain]}
               />
             </View>
@@ -81,7 +80,7 @@ class Localscreen extends Component {
                     style={styles.heroImageContainer}
                   >
                     <Image
-                      source={require('../../../../asset/call.jpg')}
+                      source={require('../../../assets/call.jpg')}
                       style={[styles.heroImage, styles.heroImageSecondary]}
                     />
                   </View>
@@ -118,7 +117,7 @@ class Localscreen extends Component {
                   <View
                     style={styles.heroImageContainertertiary}>
                     <Image
-                      source={require('../../../../asset/call.jpg')}
+                      source={require('../../../assets/call.jpg')}
                       style={styles.heroImagetertiary}
                     />
                     <View style={{ marginTop: hp('2%') }}> 

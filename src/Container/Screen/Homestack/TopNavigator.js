@@ -7,13 +7,13 @@ const TabNavigator = createMaterialTopTabNavigator({
     LocalEvent : {
         screen : LocalScreen,
         navigationOptions : {
-            tabBarLabel : 'Local Events'
+            tabBarLabel : 'Local Events',
         }
     },
     GlobalEvent : {
         screen : GlobalScreen,
         navigationOptions : {
-            tabBarLabel : 'Global Events'
+            tabBarLabel : 'Global Events',
         }
     },
 }, {
@@ -21,6 +21,7 @@ const TabNavigator = createMaterialTopTabNavigator({
         activeTintColor : 'green',
         style : {
             backgroundColor : '#2C3A47',
+            
             
         },
         indicatorStyle : {

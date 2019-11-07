@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import bgimg from '../../../../asset/pub.jpg';
+import bgimg from '../../../assets/pub.jpg';
 
 class Signup extends Component {
   render() {
