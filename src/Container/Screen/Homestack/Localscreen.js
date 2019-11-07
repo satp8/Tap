@@ -16,7 +16,7 @@ class Localscreen extends Component {
       {
         id: 1,
         name: 'junior Leagues',
-        avatar: '../../../../asset/call.jpg',
+        avatar: './',
         subtitle: 'adventure',
       },
       {
