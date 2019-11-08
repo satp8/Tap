@@ -3,17 +3,24 @@ import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import TopNavigator from './TopNavigator';
 import {drawer, HomeTab} from '../../Navigator';
+import {NavigationEvents} from 'react-navigation';
 
 class Home extends Component {
   static navigationOptions = ({navigation}) => {
     return {
-      headerTitle: 'Home',
+       headerTitle: (
+        <Text style={{
+          color : 'white',
+          fontWeight: 'bold',
+        }}>Home</Text>
+       ),
 
       headerLeft: () => (
         <Icon.Button
           name="bars"
           backgroundColor="#2C3A47"
           color="green"
+          // style={{marginLeft : 20}}
           onPress={navigation.getParam('handleDrawer')}></Icon.Button>
       ),
       headerRight: () => (
@@ -24,13 +31,18 @@ class Home extends Component {
   componentDidMount() {
     this.props.navigation.setParams({handleDrawer: this._handleDrawer});
   }
+  
   _handleDrawer = () => {
+    console.log(drawer)
     drawer.current.open();
   };
+ 
   render() {
+    console.log(this.props.navigation.state.isDrawerOpen)
     return (
+
       <View style={styles.container}>
-        <TopNavigator />
+          <TopNavigator />
       </View>
     );
   }
@@ -42,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#2C3A47',
-    // paddingLeft: 10,
-   
+    // alignItems : 'flex-start'
+    
   },
 });

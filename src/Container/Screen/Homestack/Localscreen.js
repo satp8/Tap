@@ -9,7 +9,23 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 class Localscreen extends Component {
+  componentDidMount() {
+    const { navigation } = this.props
+    this.willFocusListener = navigation.addListener('willFocus', () => {
+      console.log("willFocus")
+    })
+    this.didFocusListener = navigation.addListener('didFocus', () => {
+      console.log("didFocus")
+    })
+    this.willBlurListener = navigation.addListener('willBlur', () => {
+      console.log("willBlur")
+    })
+    this.didBlurListener = navigation.addListener('didBlur', () => {
+      console.log("didBlur")
+    })
+  }
   render() {
     const Data = [
       {
@@ -49,7 +65,7 @@ class Localscreen extends Component {
         subtitle: 'adventure',
       },
     ];
-    
+  
     return (
       <View style={styles.rootContainer}>
         <ScrollView>
@@ -141,6 +157,7 @@ const styles = StyleSheet.create({
   rootContainer: {
     backgroundColor: '#2C3A47',
     height: hp('80%'),
+    marginTop : 0
   },
   appContainer: {
     borderColor: 'transparent',

@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, Text, StyleSheet, SafeAreaView, Platform} from 'react-native';
 import NavigationService from './NavigationService';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class LeftMenu extends Component {
   render() {
     return (
-      <View style={styles.maincontainer}>
+
+      <SafeAreaView style={styles.maincontainer}>
         <View style={styles.headerbar}>
           <Icon.Button
             name="bars"
-            backgroundColor="#2C3A47"
+            backgroundColor= 'rgb(29, 32, 47)'
             color="green"
             onPress={() => this.props.drawer.current.close()}></Icon.Button>
         </View>
@@ -81,7 +82,7 @@ class LeftMenu extends Component {
             <Text style={styles.txt}>Logout</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }
@@ -91,29 +92,21 @@ export default LeftMenu;
 const styles = StyleSheet.create({
   maincontainer : {
     flex : 1,
-    backgroundColor: '#2C3A47',
+    backgroundColor: 'rgb(29, 32, 47)',
+    paddingHorizontal: 20,
   },
-
   container: {
     flex: 1,
-     justifyContent : 'flex-start',
-  
- 
-  },
+    justifyContent : 'flex-start',
+    paddingLeft  : Platform.OS === 'ios' ? 10 : 0
+    },
   headerbar :{
     flex : 0.2,
-    justifyContent : 'center',
-    width: "20%",
-    paddingLeft: 20
-    
-    
+    paddingLeft  : Platform.OS === 'ios' ? 10 : 0
   },
   btn: {
     height: 40,
-    // alignItems: 'center',
-    paddingLeft: 50,
     marginBottom: 10,
-    // justifyContent: 'center',
   },
   txt: {
     color: 'white',

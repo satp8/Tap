@@ -10,7 +10,6 @@
 		00E356F31AD99517003FC87E /* TapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TapTests.m */; };
 		07A996CC3B210EF40C2DC620 /* libPods-Tap-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67349AF30F1F418BA7596FF /* libPods-Tap-tvOSTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		13E49C8026AE4011B7182C85 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B47BC6535E49CFB1E7BF0A /* MaterialIcons.ttf */; };
@@ -21,6 +20,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* TapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TapTests.m */; };
 		3173142E98634076B0D42759 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E4319DAEC49422B9026DEBB /* FontAwesome.ttf */; };
+		34EBD3D52374527E005B9785 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34EBD3D32374527E005B9785 /* LaunchScreen.xib */; };
 		3C01EC0D365E407B9C99429D /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D35654FAF004D35A8B995F7 /* FontAwesome5_Regular.ttf */; };
 		47CC03BEA6C7498CB81680E8 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E232873A69884D019BCE152D /* Entypo.ttf */; };
 		4AD4EF1E0191489D8079A14E /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87F8F1784E124385AA6C6DBE /* FontAwesome5_Brands.ttf */; };
@@ -66,7 +66,6 @@
 		13B07F961A680F5B00A75B9A /* Tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Tap/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Tap/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Tap/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tap/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tap/main.m; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		2D35654FAF004D35A8B995F7 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		2EAF3C1CD025E07B3685190C /* Pods-Tap-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tap-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Tap-tvOS/Pods-Tap-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		2F023601002C4BF1BF14A4B3 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		34EBD3D42374527E005B9785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Tap/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		356472BBA0A0452488E2D8EF /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		3669AC558CE141D696E50D5E /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		3E4319DAEC49422B9026DEBB /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -183,9 +183,9 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				34EBD3D32374527E005B9785 /* LaunchScreen.xib */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = Tap;
@@ -397,7 +397,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				ADEAF9F8480E4EA29674FAD9 /* AntDesign.ttf in Resources */,
 				47CC03BEA6C7498CB81680E8 /* Entypo.ttf in Resources */,
 				911715C00E2F4B088A151BBE /* EvilIcons.ttf in Resources */,
@@ -413,6 +412,7 @@
 				13E49C8026AE4011B7182C85 /* MaterialIcons.ttf in Resources */,
 				95F874AC67E84E71A8911328 /* Octicons.ttf in Resources */,
 				752B5BE86F664848BD56568E /* SimpleLineIcons.ttf in Resources */,
+				34EBD3D52374527E005B9785 /* LaunchScreen.xib in Resources */,
 				D93EBC12437E4E7DADCF7662 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,13 +642,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+		34EBD3D32374527E005B9785 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				13B07FB21A68108700A75B9A /* Base */,
+				34EBD3D42374527E005B9785 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = Tap;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -708,6 +707,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_ASSET_PATHS = Tap/Images.xcassets;
 				DEVELOPMENT_TEAM = L73K63TP9E;
 				INFOPLIST_FILE = Tap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -728,6 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Tap/Images.xcassets;
 				DEVELOPMENT_TEAM = L73K63TP9E;
 				INFOPLIST_FILE = Tap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

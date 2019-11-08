@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ImageBackground } from 'react-native';
+import { View, StyleSheet, ImageBackground, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import bgimg from '../../../assets/pub.jpg';
@@ -13,7 +13,7 @@ class Signup extends Component {
         imageStyle={{ resizeMode: 'cover' }}
       >
         <View style={styles.overlay} />
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
           <Button
             buttonStyle={[styles.inputStyle, { backgroundColor: '#1dd1a1' }]}
             title="LOG IN"
@@ -65,7 +65,7 @@ class Signup extends Component {
             }
             iconRight
           />
-        </View>
+        </SafeAreaView>
       </ImageBackground>
     );
   }
@@ -73,7 +73,10 @@ class Signup extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 400,
+   flex: 1,
+   justifyContent : 'flex-end',
+   marginBottom: 50,
+
   },
   inputStyle: {
     borderRadius: 15,
