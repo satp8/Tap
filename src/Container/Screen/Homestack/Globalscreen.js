@@ -3,6 +3,23 @@ import {View, Text, StyleSheet, FlatList, ScrollView, Image} from 'react-native'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 class Globalscreen extends Component {
+  static navigationOptions = {
+    tabBarOptions: {
+      style : {
+        backgroundColor: '#2C3A47',
+        elevation: 0,
+        shadowOpacity: 0, 
+        width:'90%',
+        alignSelf:'center',
+    },
+     indicatorStyle: {
+        backgroundColor: '#fff',
+        marginLeft: Platform.OS === 'ios' ? 100  : 90,
+       
+        width: 70,
+      },
+    },
+  };
   render() {
     const Data = [
       {

@@ -10,8 +10,9 @@ class Home extends Component {
     return {
        headerTitle: (
         <Text style={{
-          color : 'white',
+          color : '#fff',
           fontWeight: 'bold',
+          fontSize : 15
         }}>Home</Text>
        ),
 
@@ -38,7 +39,7 @@ class Home extends Component {
   };
  
   render() {
-    console.log(this.props.navigation.state.isDrawerOpen)
+ 
     return (
 
       <View style={styles.container}>

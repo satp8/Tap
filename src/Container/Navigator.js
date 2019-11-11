@@ -130,7 +130,6 @@ class Navigator extends Component {
           elevation: 15,
         }}>
        <MainStack
-            isOpen={this.state.isOpen}
             ref={navigatorRef => {
               NavigationService.setTopLevelNavigator(navigatorRef);
             }}

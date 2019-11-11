@@ -13,7 +13,9 @@ class LeftMenu extends Component {
             name="bars"
             backgroundColor= 'rgb(29, 32, 47)'
             color="green"
+            style={{paddingLeft : 0, paddingTop : 10}}
             onPress={() => this.props.drawer.current.close()}></Icon.Button>
+            
         </View>
         <View style={styles.container}>
           <TouchableOpacity
@@ -102,7 +104,7 @@ const styles = StyleSheet.create({
     },
   headerbar :{
     flex : 0.2,
-    paddingLeft  : Platform.OS === 'ios' ? 10 : 0
+    paddingLeft  : Platform.OS === 'ios' ? 10 : 0,
   },
   btn: {
     height: 40,
