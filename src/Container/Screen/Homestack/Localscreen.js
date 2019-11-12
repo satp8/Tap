@@ -22,15 +22,29 @@ class Localscreen extends Component {
         shadowOpacity: 0,
         width: '90%',
         alignSelf: 'center',
+        height : 40
       },
       indicatorStyle: {
         backgroundColor: '#fff',
-        width: 70,
+        width: 60,
+        marginLeft : 10
       },
     },
   };
-
-  render() {
+  renderSeparator = () => {  
+    return (  
+        <View  
+            style={{  
+                height: 1,  
+                width: "100%",
+                marginLeft : 10,  
+                backgroundColor: "#000",  
+                marginTop : 10
+            }}  
+        />  
+    );  
+};  
+  render() { 
     const Data = [
       {
         id: 1,
@@ -122,7 +136,7 @@ class Localscreen extends Component {
               justifyContent: 'space-between',
               marginTop: 20,
             }}>
-            <Text style={{color: '#1dd1a1', marginLeft: 20}}>
+            <Text style={{color: 'rgb(10,166,124)', marginLeft: 20}}>
               Top rated titles
             </Text>
             <TouchableOpacity>
@@ -142,7 +156,7 @@ class Localscreen extends Component {
               ]}>
               <FlatList
                 numColumns={Data.length / 2}
-                ItemSeparatorComponent={this.renderdivider}
+                ItemSeparatorComponent={this.renderSeparator}
                 key={Math.random()}
                 data={Data}
                 keyExtractor={(item, index) => item.id}
@@ -187,7 +201,7 @@ const styles = StyleSheet.create({
   },
   heroImage: {
     borderRadius: 10,
-    marginTop: hp('5%'),
+    marginTop: hp('2%'),
     resizeMode: 'cover',
     height: hp('25%'),
   },

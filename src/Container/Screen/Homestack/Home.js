@@ -12,7 +12,7 @@ class Home extends Component {
         <Text style={{
           color : '#fff',
           fontWeight: 'bold',
-          fontSize : 15
+          fontSize : 18
         }}>Home</Text>
        ),
 
@@ -20,7 +20,7 @@ class Home extends Component {
         <Icon.Button
           name="bars"
           backgroundColor="#2C3A47"
-          color="green"
+          color="rgb(10,166,124)"
           // style={{marginLeft : 20}}
           onPress={navigation.getParam('handleDrawer')}></Icon.Button>
       ),

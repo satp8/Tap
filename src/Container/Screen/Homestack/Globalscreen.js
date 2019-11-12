@@ -11,12 +11,12 @@ class Globalscreen extends Component {
         shadowOpacity: 0, 
         width:'90%',
         alignSelf:'center',
+        height : 40
     },
      indicatorStyle: {
         backgroundColor: '#fff',
         marginLeft: Platform.OS === 'ios' ? 100  : 90,
-       
-        width: 70,
+        width: 60,
       },
     },
   };
@@ -74,6 +74,9 @@ class Globalscreen extends Component {
     return (
       <View style={styles.container}>
           <FlatList
+            contentContainerStyle={{
+              paddingBottom : 20
+            }}
             data={Data}
             renderItem={({item}) => (
               <View>
@@ -109,7 +112,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2C3A47',
     height: hp('80%'),
-    marginBottom: 300
+    // marginBottom: 400
   },
   appContainer: {
     borderColor: 'transparent',
@@ -138,7 +141,7 @@ const styles = StyleSheet.create({
   },
   heroImage: {
     borderRadius: 10, 
-    marginTop: hp('5%'), 
+    marginTop: hp('2%'), 
     resizeMode: 'cover', 
     height: hp('25%'), 
   },

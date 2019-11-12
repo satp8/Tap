@@ -20,7 +20,6 @@ import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 
 import {View} from 'react-native';
 
-
 const AppStack = createStackNavigator(
   {
     Home: {
@@ -47,7 +46,6 @@ const AppStack = createStackNavigator(
     Logout: {
       screen: Logout,
     },
-    
   },
   {
     initialRouteName: 'Home',
@@ -93,25 +91,12 @@ const MainStack = createAppContainer(AppSwitch);
 class Navigator extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isOpen : false
-    }
  
   }
   render() {
     return (
       <ScalingDrawer
         ref={drawer}
-        onOpen={() => {
-          this.setState({
-            isOpen : true
-          })
-        }}
-        onClose={() => {
-          this.setState({
-            isOpen : false
-          })
-        }}
         content={<LeftMenu drawer={drawer} />}
         {...defaultScalingDrawerConfig}
         frontStyle={{
@@ -120,20 +105,19 @@ class Navigator extends Component {
             width: 0,
             height: 7,
           },
-          
+
           shadowOpacity: 0.43,
           shadowRadius: 9.51,
           backgroundColor: 'rgb(31, 37 , 63)',
-          // opacity : this.state.isOpen ? 0 : 1,
-          // borderTopLeftRadius: 40,
-          // borderBottomLeftRadius: 40,
+          borderTopLeftRadius: 80,
           elevation: 15,
-        }}>
-       <MainStack
-            ref={navigatorRef => {
-              NavigationService.setTopLevelNavigator(navigatorRef);
-            }}
-          />
+        }}
+        >
+        <MainStack
+          ref={navigatorRef => {
+            NavigationService.setTopLevelNavigator(navigatorRef);
+          }}
+        />
       </ScalingDrawer>
     );
   }

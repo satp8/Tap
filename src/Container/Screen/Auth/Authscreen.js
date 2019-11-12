@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { View, StyleSheet, ImageBackground, SafeAreaView } from 'react-native';
-import { Button } from 'react-native-elements';
+import React, {Component} from 'react';
+import {View, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView} from 'react-native';
+import {Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import bgimg from '../../../assets/pub.jpg';
 
@@ -9,16 +9,17 @@ class Signup extends Component {
     return (
       <ImageBackground
         source={bgimg}
-        style={{ width: '100%', height: '100%', color: '#000' }}
-        imageStyle={{ resizeMode: 'cover' }}
-      >
+        style={{width: '100%', height: '100%', color: '#000'}}
+        imageStyle={{resizeMode: 'cover'}}>
         <View style={styles.overlay} />
         <SafeAreaView style={styles.container}>
+        
           <Button
-            buttonStyle={[styles.inputStyle, { backgroundColor: '#1dd1a1' }]}
+        TouchableComponent={TouchableOpacity}
+            buttonStyle={[styles.inputStyle, {backgroundColor: '#1dd1a1'}]}
             title="LOG IN"
             titleStyle={{
-              flex:1,
+              flex: 1,
               marginLeft: 30,
               fontWeight: 'bold',
             }}
@@ -39,8 +40,10 @@ class Signup extends Component {
             }
             iconRight
           />
+         
           <Button
-            buttonStyle={[styles.inputStyle, { backgroundColor: '#fff' }]}
+            buttonStyle={[styles.inputStyle, {backgroundColor: '#fff'}]}
+            TouchableComponent={TouchableOpacity}
             title="SIGN UP"
             titleStyle={{
               flex: 1,
@@ -73,10 +76,9 @@ class Signup extends Component {
 
 const styles = StyleSheet.create({
   container: {
-   flex: 1,
-   justifyContent : 'flex-end',
-   marginBottom: 50,
-
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 50,
   },
   inputStyle: {
     borderRadius: 15,

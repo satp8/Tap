@@ -1,21 +1,26 @@
 import React, {Component} from 'react';
-import {View, TouchableOpacity, Text, StyleSheet, SafeAreaView, Platform} from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  Platform,
+} from 'react-native';
 import NavigationService from './NavigationService';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class LeftMenu extends Component {
   render() {
     return (
-
       <SafeAreaView style={styles.maincontainer}>
         <View style={styles.headerbar}>
           <Icon.Button
             name="bars"
-            backgroundColor= 'rgb(29, 32, 47)'
-            color="green"
-            style={{paddingLeft : 0, paddingTop : 10}}
+            backgroundColor="rgb(29, 32, 47)"
+            color="rgb(10,166,124)"
+            style={{paddingLeft: 0, paddingTop: 10}}
             onPress={() => this.props.drawer.current.close()}></Icon.Button>
-            
         </View>
         <View style={styles.container}>
           <TouchableOpacity
@@ -92,19 +97,19 @@ class LeftMenu extends Component {
 export default LeftMenu;
 
 const styles = StyleSheet.create({
-  maincontainer : {
-    flex : 1,
+  maincontainer: {
+    flex: 1,
     backgroundColor: 'rgb(29, 32, 47)',
     paddingHorizontal: 20,
   },
   container: {
     flex: 1,
-    justifyContent : 'flex-start',
-    paddingLeft  : Platform.OS === 'ios' ? 10 : 0
-    },
-  headerbar :{
-    flex : 0.2,
-    paddingLeft  : Platform.OS === 'ios' ? 10 : 0,
+    justifyContent: 'flex-start',
+    paddingLeft: Platform.OS === 'ios' ? 20 : 0,
+  },
+  headerbar: {
+    flex: 0.2,
+    paddingLeft: Platform.OS === 'ios' ? 20 : 0,
   },
   btn: {
     height: 40,

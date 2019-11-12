@@ -43,12 +43,6 @@ const TabNavigator = createMaterialTopTabNavigator(
       inactiveTintColor: 'white',
       upperCaseLabel: false,
       showLabel: true,
-      
-      // indicatorStyle: {
-      //   backgroundColor: '#fff',
-      //   // marginLeft: Platform.OS === 'ios' ? 62 : 52,
-      //   width: 80,
-      // },
     },
   },
 );
@@ -58,7 +52,7 @@ const styles = StyleSheet.create({
   tabBarLabel1: {
     color: '#fff',
     fontWeight: 'bold',
-    marginLeft : Platform.OS === 'ios' ? -90 : -80
+    marginLeft : Platform.OS === 'ios' ? -85 : -80
     
   },
   tabBarLabel2: {
@@ -67,7 +61,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   tabBarLabelActive: {
-    color: 'green',
+    color: 'rgb(10,166,124)',
   },
 });
 
