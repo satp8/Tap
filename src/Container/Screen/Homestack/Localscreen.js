@@ -159,7 +159,7 @@ class Localscreen extends Component {
                 ItemSeparatorComponent={this.renderSeparator}
                 key={Math.random()}
                 data={Data}
-                keyExtractor={(item, index) => item.id}
+                keyExtractor={(item, index) => item.id} 
                 renderItem={({item}) => (
                   <View style={styles.heroImageContainertertiary}>
                     <Image
