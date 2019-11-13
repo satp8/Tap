@@ -152,7 +152,7 @@ class Localscreen extends Component {
             horizontal={false}
             numColumns={2}
             data={Data}
-            columnWrapperStyle={{marginHorizontal:15}}
+            columnWrapperStyle={{marginHorizontal:10}}
             renderItem={({item}) => (
               <View style={styles.secondaryAppContainer}>
                 <View style={styles.appContainer}>
@@ -335,23 +335,23 @@ const styles = StyleSheet.create({
     height: hp('25%'),
   },
   heroImageMain: {
-    width: wp('85%'),
+    width: wp('90%'),
   },
   heroImageSecondary: {
-    width: wp('40%'),
+    width: wp('42%'),
   },
   mainPostHead: {
     fontWeight: 'bold',
     fontSize: hp('2.5%'),
     color: '#fff',
-    marginLeft: wp('7.5%'),
+    marginLeft: wp('5%'),
     marginTop: hp('2%'),
   },
   mainPostBody: {
     textAlign: 'left',
-    fontSize: hp('2%'),
+    fontSize: 13,
     color: '#747d8c',
-    marginLeft: wp('7.5%'),
+    marginLeft: wp('5%'),
     marginTop: hp('1%'),
     marginRight: wp('5%'),
   },
@@ -364,14 +364,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     color: '#fff',
-    marginLeft: wp('2.5%'),
+    marginLeft: wp('3%'),
     marginTop: hp('2%'),
   },
   secondaryPostBody: {
     textAlign: 'left',
     fontSize: 13,
     color: '#747d8c',
-    marginLeft: wp('2.5%'),
+    marginLeft: wp('3%'),
     marginTop: hp('1.5%'),
     marginRight: wp('5%'),
   },
