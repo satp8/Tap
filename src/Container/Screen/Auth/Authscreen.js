@@ -15,7 +15,7 @@ class Signup extends Component {
         <SafeAreaView style={styles.container}>
         
           <Button
-        TouchableComponent={TouchableOpacity}
+            TouchableComponent={TouchableOpacity}
             buttonStyle={[styles.inputStyle, {backgroundColor: '#1dd1a1'}]}
             title="LOG IN"
             titleStyle={{
