@@ -4,6 +4,10 @@ import LocalScreen from './Localscreen';
 import GlobalScreen from './Globalscreen';
 import {createAppContainer} from 'react-navigation';
 import {Platform, Text, StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 const TabNavigator = createMaterialTopTabNavigator(
   {
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
   tabBarLabel1: {
     color: '#fff',
     fontWeight: 'bold',
-    marginLeft : Platform.OS === 'ios' ? -85 : -80
+    marginLeft : Platform.OS === 'ios' ? -85 : hp("-12.5%")
     
   },
   tabBarLabel2: {

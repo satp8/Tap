@@ -54,6 +54,7 @@ const AppStack = createStackNavigator(
       headerStyle: {
         backgroundColor: '#2C3A47',
         elevation: 0,
+        borderBottomWidth: 0,
       },
       headerLeftContainerStyle: {
         paddingLeft: 10,

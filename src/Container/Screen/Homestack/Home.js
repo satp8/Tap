@@ -5,6 +5,7 @@ import TopNavigator from './TopNavigator';
 import {drawer, HomeTab} from '../../Navigator';
 import {NavigationEvents} from 'react-navigation';
 
+
 class Home extends Component {
   static navigationOptions = ({navigation}) => {
     return {
@@ -21,7 +22,7 @@ class Home extends Component {
           name="bars"
           backgroundColor="#2C3A47"
           color="rgb(10,166,124)"
-          // style={{marginLeft : 20}}
+          // style={{marginLeft : 5}}
           onPress={navigation.getParam('handleDrawer')}></Icon.Button>
       ),
       headerRight: () => (

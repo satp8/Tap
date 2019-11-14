@@ -11,7 +11,9 @@ class Globalscreen extends Component {
         shadowOpacity: 0, 
         width:'90%',
         alignSelf:'center',
-        height : 40
+        height : 40,
+        marginBottom: 5
+
     },
      indicatorStyle: {
         backgroundColor: '#fff',

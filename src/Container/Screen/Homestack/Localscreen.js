@@ -22,12 +22,15 @@ class Localscreen extends Component {
         shadowOpacity: 0,
         width: '90%',
         alignSelf: 'center',
-        height : 40
+        height : 40,
+        marginBottom: 5
+        
       },
       indicatorStyle: {
         backgroundColor: '#fff',
         width: 60,
-        marginLeft : 10
+        marginLeft : 10,
+        
       },
     },
   };
@@ -184,9 +187,9 @@ class Localscreen extends Component {
             }}>
             <Text style={{color: 'rgb(10,166,124)', marginLeft: 20}}>
               Top rated titles
-            </Text>
+            </Text> 
             <TouchableOpacity>
-              <Text style={{color: '#747d8c', marginRight: 20}}>See all</Text>
+              <Text style={{color: '#747d8c', marginRight: 20, fontSize: 12}}>See all</Text>
             </TouchableOpacity>
           </View>
 
@@ -197,13 +200,14 @@ class Localscreen extends Component {
                 {
                   // flexDirection: 'column',
                   marginBottom: hp('5%'),
-                  // marginRight: hp('5%'),
+                  marginLeft: hp('2%'), 
                 },
               ]}>
           {/* <ScrollView horizontal showsHorizontalScrollIndicator={false}> */}
               <FlatList
                 // numColumns={Data2.length / 2}
                 // ItemSeparatorComponent={this.renderSeparator}
+                pagingEnabled={true}
                 key={Math.random()}
                 data={Data2}
                 horizontal
@@ -211,7 +215,7 @@ class Localscreen extends Component {
                 keyExtractor={(item, index) => item.id} 
                 renderItem={({item}) => (
                   <View>
-                  <View  style={{marginRight:26}}>
+                  <View style={{marginRight: 25}}>
                   <View style={[styles.heroImageContainertertiary]}>
                     <Image
                       source={item.avatar}
@@ -225,17 +229,17 @@ class Localscreen extends Component {
                     </View>
                   </View>
                 </View>
-                <View style={{               
-                    height: 1,  
-                    width: "100%",
-                    marginLeft : 25,  
-                    backgroundColor: "#535c68",  
-                    marginTop : 10}}>
-                  </View>
                 </View>
                   
                 )}
               />
+              <View style={{               
+                    height: 1,  
+                    width: "100%",
+                    marginLeft : 5,  
+                    backgroundColor: "#535c68",  
+                    marginTop : 10}}>
+                </View>
                     <FlatList
                 // numColumns={Data2.length / 2}
                 // ItemSeparatorComponent={this.renderSeparator}
@@ -260,16 +264,16 @@ class Localscreen extends Component {
                     </View>
                   </View>
                   </View>
-                  <View style={{               
-                    height: 1.2,  
-                    width: "100%",
-                    marginLeft : 25,  
-                    backgroundColor: "#535c68",  
-                    marginTop : 10}}>
-                  </View>
                   </View>
                 )}
               />
+               <View style={{               
+                    height: 1.2,  
+                    width: "100%",
+                    marginLeft : 5,  
+                    backgroundColor: "#535c68",  
+                    marginTop : 10}}>
+                  </View>
                     <FlatList
                 // numColumns={Data2.length / 2}
                 // ItemSeparatorComponent={this.renderSeparator}
@@ -294,16 +298,16 @@ class Localscreen extends Component {
                     </View>
                   </View>
                   </View>
-                  <View style={{               
-                    height: 1,  
-                    width: "100%",
-                    marginLeft : 25,  
-                    backgroundColor: "#535c68",  
-                    marginTop : 10}}>
-                  </View>
                   </View>
                 )}
               />
+                 <View style={{               
+                    height: 1,  
+                    width: "100%",
+                    marginLeft : 5,  
+                    backgroundColor: "#535c68",  
+                    marginTop : 10}}>
+                  </View>
             </View>
           {/* </ScrollView> */}
         </ScrollView>
@@ -376,7 +380,7 @@ const styles = StyleSheet.create({
     marginRight: wp('5%'),
   },
   heroImageContainertertiary: {
-    marginLeft: wp('5%'),
+    marginLeft: wp('2%'),
     marginRight: wp('5%'),
     flexDirection: 'row',
     marginTop: hp('2.5%'),
