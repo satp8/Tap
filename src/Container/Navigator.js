@@ -97,6 +97,12 @@ class Navigator extends Component {
     return (
       <ScalingDrawer
         ref={drawer}
+        onOpen={(e) =>{
+        
+        }}
+        onClose={() => {
+        
+        }}
         content={<LeftMenu drawer={drawer} />}
         {...defaultScalingDrawerConfig}
         frontStyle={{

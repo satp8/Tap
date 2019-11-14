@@ -7,6 +7,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  
 } from 'react-native';
 import {
   widthPercentageToDP as wp,
@@ -14,6 +15,10 @@ import {
 } from 'react-native-responsive-screen';
 
 class Localscreen extends Component {
+  constructor(props) {
+    super(props)
+   
+  }
   static navigationOptions = {
     tabBarOptions: {
       style: {
@@ -31,6 +36,7 @@ class Localscreen extends Component {
       },
     },
   };
+  
   renderSeparator = () => {  
     return (  
         <View  
@@ -45,6 +51,7 @@ class Localscreen extends Component {
     );  
 };  
   render() { 
+   
     const Data = [
       {
         id: 1,
@@ -87,6 +94,7 @@ class Localscreen extends Component {
     return (
       <View style={styles.rootContainer}>
         <ScrollView>
+    
           <View style={styles.appContainer}>
             <View style={styles.heroImageContainer}>
               <Image
