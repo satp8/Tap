@@ -11,7 +11,9 @@ class Globalscreen extends Component {
         shadowOpacity: 0, 
         width:'90%',
         alignSelf:'center',
-        height : 40
+        height : 40,
+        marginBottom: 5
+
     },
      indicatorStyle: {
         backgroundColor: '#fff',
@@ -25,49 +27,31 @@ class Globalscreen extends Component {
       {
         id: 1,
         name: 'junior Leagues',
-        avatar: '../../../assets/call.jpg',
+        avatar: require('../../../assets/call.jpg'),
         subtitle: 'adventure',
       },
       {
         id: 2,
         name: 'brynn',
-        avatar: '../../../assets/call.jpg',
+        avatar: require('../../../assets/cod.jpg'),
         subtitle: 'adventure',
       },
       {
         id: 3,
         name: 'brynn',
-        avatar: '../../../assets/call.jpg',
+        avatar: require('../../../assets/battle_field.jpg'),
         subtitle: 'adventure',
       },
       {
         id: 4,
         name: 'brynn',
-        avatar: '../../../assets/call.jpg',
+        avatar: require('../../../assets/cod2.jpg'),
         subtitle: 'adventure',
       },
       {
         id: 5,
         name: 'brynn',
-        avatar: '../../../assets/call.jpg',
-        subtitle: 'adventure',
-      },
-      {
-        id: 6,
-        name: 'brynn',
-        avatar: '../../../assets/call.jpg',
-        subtitle: 'adventure',
-      },
-      {
-        id: 7,
-        name: 'brynn',
-        avatar: '../../../assets/call.jpg',
-        subtitle: 'adventure',
-      },
-      {
-        id: 8,
-        name: 'brynn',
-        avatar: '../../../assets/call.jpg',
+        avatar: require('../../../assets/red_dead2.jpg'),
         subtitle: 'adventure',
       },
     ];
@@ -85,7 +69,7 @@ class Globalscreen extends Component {
                   <View
                     style={styles.heroImageContainer}>
                     <Image
-                      source={require('../../../assets/call.jpg')}
+                      source={item.avatar}
                       style={[styles.heroImageMain, styles.heroImage]}
                     />
                   </View>
@@ -112,7 +96,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2C3A47',
     height: hp('80%'),
-    // marginBottom: 400
+    // marginTop: 10
   },
   appContainer: {
     borderColor: 'transparent',

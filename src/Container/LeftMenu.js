@@ -20,7 +20,14 @@ class LeftMenu extends Component {
             backgroundColor="rgb(29, 32, 47)"
             color="rgb(10,166,124)"
             style={{paddingLeft: 0, paddingTop: 10}}
-            onPress={() => this.props.drawer.current.close()}></Icon.Button>
+            onPress={() => 
+            {
+              NavigationService.navigate('Home',{
+                close : true
+              });
+              this.props.drawer.current.close()
+            }
+            }></Icon.Button>
         </View>
         <View style={styles.container}>
           <TouchableOpacity

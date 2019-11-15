@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {View, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView} from 'react-native';
+import {View, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import bgimg from '../../../assets/pub.jpg';
 
-class Signup extends Component {
+class AuthMain extends Component {
+
   render() {
     return (
       <ImageBackground
@@ -15,7 +16,7 @@ class Signup extends Component {
         <SafeAreaView style={styles.container}>
         
           <Button
-        TouchableComponent={TouchableOpacity}
+            TouchableComponent={TouchableOpacity}
             buttonStyle={[styles.inputStyle, {backgroundColor: '#1dd1a1'}]}
             title="LOG IN"
             titleStyle={{
@@ -31,10 +32,11 @@ class Signup extends Component {
                 color="white"
                 style={{
                   marginRight: 5,
-                  borderRadius: 20,
+                  borderRadius: Platform.OS === 'ios' ? 15 : 20,
                   backgroundColor: '#10ac84',
                   paddingHorizontal: 8,
                   paddingVertical: 6,
+                  overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
                 }}
               />
             }
@@ -58,11 +60,13 @@ class Signup extends Component {
                 color="white"
                 style={{
                   marginRight: 5,
-                  borderRadius: 20,
+                  borderRadius: Platform.OS === 'ios' ? 15 : 20,
                   backgroundColor: '#f5f6fa',
                   color: '#10ac84',
                   paddingHorizontal: 8,
                   paddingVertical: 6,
+                  overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
+                  
                 }}
               />
             }
@@ -95,4 +99,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.6)',
   },
 });
-export default Signup;
+export default AuthMain;

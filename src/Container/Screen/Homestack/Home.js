@@ -5,6 +5,7 @@ import TopNavigator from './TopNavigator';
 import {drawer, HomeTab} from '../../Navigator';
 import {NavigationEvents} from 'react-navigation';
 
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -78,15 +79,18 @@ class Home extends Component {
   };
 
   render() {
-    if (this.state.isDrawerOpen === false) {
-      return (
-        <View style={styles.container}>
-          <TopNavigator />
-        </View>
-      );
-    } else if (this.state.isDrawerOpen === true) {
-      return <View pointerEvents={'none'} style={{flex: 1, backgroundColor: '#2C3A47'}}></View>;
-    }
+    // if (this.state.isDrawerOpen === false) {
+    //   return (
+    //     <View style={styles.container}>
+    //       <TopNavigator />
+    //     </View>
+    //   );
+    // } else if (this.state.isDrawerOpen === true) {
+    //   return <View clickable={false} accessible={false}  style={{flex: 1, backgroundColor: '#2C3A47'}}></View>;
+    // }
+    <View style={styles.container}>
+    <TopNavigator />
+  </View>
   }
 }
 
