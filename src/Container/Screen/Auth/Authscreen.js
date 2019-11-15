@@ -43,14 +43,14 @@ class Signup extends Component {
           />
          
           <Button
-            buttonStyle={[styles.inputStyle, {backgroundColor: '#fff'}]}
+            buttonStyle={[styles.inputStyle, {backgroundColor: '#7272fb'}]}
             TouchableComponent={TouchableOpacity}
             title="SIGN UP"
             titleStyle={{
               flex: 1,
               marginLeft: 30,
               fontWeight: 'bold',
-              color: '#1dd1a1',
+              color: '#fff',
             }}
             icon={
               <Icon
@@ -60,8 +60,8 @@ class Signup extends Component {
                 style={{
                   marginRight: 5,
                   borderRadius: Platform.OS === 'ios' ? 15 : 20,
-                  backgroundColor: '#f5f6fa',
-                  color: '#10ac84',
+                  backgroundColor: '#7272fb',
+                  color: '#fff',
                   paddingHorizontal: 8,
                   paddingVertical: 6,
                   overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
