@@ -3,12 +3,15 @@ import React from 'react';
 import LocalScreen from './Localscreen';
 import GlobalScreen from './Globalscreen';
 import {createAppContainer} from 'react-navigation';
-import {Platform, Text, StyleSheet} from 'react-native';
+import {Platform, Text, StyleSheet, Dimensions, PixelRatio} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-
+export const deviceWidth = Dimensions.get('window').width
+export const deviceHeight = Dimensions.get('window').height
+export const calcHeight = x => PixelRatio.roundToNearestPixel((deviceHeight * x) / 100)
+export const calcWidth = x => PixelRatio.roundToNearestPixel((deviceWidth * x) / 100)
 const TabNavigator = createMaterialTopTabNavigator(
   {
     LocalEvent: {
@@ -56,12 +59,12 @@ const styles = StyleSheet.create({
   tabBarLabel1: {
     color: '#fff',
     fontWeight: 'bold',
-    marginLeft : Platform.OS === 'ios' ? -85 : hp("-12.5%")
+    marginLeft : Platform.OS === 'ios' ? calcWidth(-22) : calcWidth(-22.5)
     
   },
   tabBarLabel2: {
     color: '#fff',
-    marginRight: -75,
+    marginRight: calcWidth(-30),
     fontWeight: 'bold',
   },
   tabBarLabelActive: {

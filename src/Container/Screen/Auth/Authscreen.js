@@ -4,7 +4,8 @@ import {Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import bgimg from '../../../assets/pub.jpg';
 
-class Signup extends Component {
+class AuthMain extends Component {
+
   render() {
     return (
       <ImageBackground
@@ -16,7 +17,8 @@ class Signup extends Component {
         
           <Button
             TouchableComponent={TouchableOpacity}
-            buttonStyle={[styles.inputStyle, {backgroundColor: '#07a97b'}]}
+            containerStyle={styles.shadow}
+            buttonStyle={[styles.buttonStyle, {backgroundColor: '#07a97b'}]}
             title="LOG IN"
             titleStyle={{
               flex: 1,
@@ -43,7 +45,7 @@ class Signup extends Component {
           />
          
           <Button
-            buttonStyle={[styles.inputStyle, {backgroundColor: '#7272fb'}]}
+            buttonStyle={[styles.buttonStyle, {backgroundColor: '#7272fb'}]}
             TouchableComponent={TouchableOpacity}
             title="SIGN UP"
             titleStyle={{
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: 50,
   },
-  inputStyle: {
+  buttonStyle: {
     borderRadius: 15,
     marginHorizontal: 30,
     padding: 15,
@@ -98,4 +100,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.6)',
   },
 });
-export default Signup;
+export default AuthMain;

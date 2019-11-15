@@ -15,10 +15,15 @@ import {
 } from 'react-native-responsive-screen';
 
 class Localscreen extends Component {
+  constructor(props) {
+    super(props)
+   
+  }
   static navigationOptions = {
     tabBarOptions: {
       style: {
         backgroundColor: '#2C3A47',
+      
         elevation: 0,
         shadowOpacity: 0,
         width: '90%',
@@ -35,6 +40,7 @@ class Localscreen extends Component {
       },
     },
   };
+  
   renderSeparator = () => {  
     return (  
         <View  
@@ -49,6 +55,7 @@ class Localscreen extends Component {
     );  
 };  
   render() { 
+   
     const Data = [
       {
         id: 1,
@@ -171,6 +178,7 @@ class Localscreen extends Component {
     return (
       <View style={styles.rootContainer}>
         <ScrollView>
+    
           <View style={styles.appContainer}>
             <View style={styles.heroImageContainer}>
               <Image

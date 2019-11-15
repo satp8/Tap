@@ -14,12 +14,43 @@ import PulseEsports from './Screen/PulseEsportsLeague/PulseEsports';
 import BrowseTournaments from './Screen/BrowseTournaments/BrowseTournaments';
 import LeftMenu from './LeftMenu';
 import Auth from './Screen/Auth/Authscreen';
+import Login from './Screen/Auth/Login';
+import ResetPassword from './Screen/Auth/ResetPassword';
+import ForgotPassword from './Screen/Auth/ForgotPassword'
+import AboutYou from './Screen/Auth/AboutYou';
+import SignUp from './Screen/Auth/SignUp';
+import OtpCode from './Screen/Auth/OtpCode';
 import NavigationService from './NavigationService';
 
-import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 
-import {View} from 'react-native';
-
+const AuthStack = createStackNavigator({
+  AuthMain: {
+    screen: Auth,
+    navigationOptions : {
+      header : null
+    }
+  },
+  Login: {
+    screen: Login,
+  },
+  ForgotPassword: {
+    screen: ForgotPassword,
+  },
+  OtpCode: {
+    screen: OtpCode,
+  },
+  ResetPassowrd: {
+    screen: ResetPassword,
+  },
+  AboutYou: {
+    screen: AboutYou,
+  },
+  SignUp: {
+    screen: SignUp,
+  },
+},{
+  initialRouteName: 'Login'
+});
 const AppStack = createStackNavigator(
   {
     Home: {
@@ -69,7 +100,7 @@ const AppStack = createStackNavigator(
 const AppSwitch = createSwitchNavigator(
   {
     Auth: {
-      screen: Auth,
+      screen: AuthStack,
     },
     AppStack: {
       screen: AppStack,
@@ -92,12 +123,13 @@ const MainStack = createAppContainer(AppSwitch);
 class Navigator extends Component {
   constructor(props) {
     super(props);
- 
   }
   render() {
     return (
       <ScalingDrawer
         ref={drawer}
+        onOpen={e => {}}
+        onClose={() => {}}
         content={<LeftMenu drawer={drawer} />}
         {...defaultScalingDrawerConfig}
         frontStyle={{
@@ -112,8 +144,7 @@ class Navigator extends Component {
           backgroundColor: 'rgb(31, 37 , 63)',
           borderTopLeftRadius: 80,
           elevation: 15,
-        }}
-        >
+        }}>
         <MainStack
           ref={navigatorRef => {
             NavigationService.setTopLevelNavigator(navigatorRef);

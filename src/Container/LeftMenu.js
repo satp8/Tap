@@ -20,13 +20,22 @@ class LeftMenu extends Component {
             backgroundColor="rgb(29, 32, 47)"
             color="rgb(10,166,124)"
             style={{paddingLeft: 0, paddingTop: 10}}
-            onPress={() => this.props.drawer.current.close()}></Icon.Button>
+            onPress={() => 
+            {
+              NavigationService.navigate('Home',{
+                close : true
+              });
+              this.props.drawer.current.close()
+            }
+            }></Icon.Button>
         </View>
         <View style={styles.container}>
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('Home');
+              NavigationService.navigate('Home',{
+                close : true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Home</Text>
@@ -34,7 +43,9 @@ class LeftMenu extends Component {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('BrowseTournaments');
+              NavigationService.navigate('BrowseTournaments', {
+                close : true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Browse tournaments</Text>
@@ -42,7 +53,9 @@ class LeftMenu extends Component {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('PulseEsports');
+              NavigationService.navigate('PulseEsports', {
+                close : true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Pulse Esports League</Text>
@@ -50,7 +63,9 @@ class LeftMenu extends Component {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('PlayerLocating');
+              NavigationService.navigate('PlayerLocating', {
+                close : true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Player/Coach Locating</Text>
@@ -58,7 +73,9 @@ class LeftMenu extends Component {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('TokenWallet');
+              NavigationService.navigate('TokenWallet' , {
+                close : true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Token Wallet</Text>
@@ -67,7 +84,9 @@ class LeftMenu extends Component {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('Profile');
+              NavigationService.navigate('Profile' , {
+                close: true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Profile</Text>
@@ -75,7 +94,9 @@ class LeftMenu extends Component {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('Settings');
+              NavigationService.navigate('Settings', {
+                close: true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Settings</Text>
@@ -83,7 +104,9 @@ class LeftMenu extends Component {
           <TouchableOpacity
             style={styles.btn}
             onPress={() => {
-              NavigationService.navigate('Logout');
+              NavigationService.navigate('Logout', {
+                close: true
+              });
               this.props.drawer.current.close();
             }}>
             <Text style={styles.txt}>Logout</Text>
