@@ -16,7 +16,7 @@ class Signup extends Component {
         
           <Button
             TouchableComponent={TouchableOpacity}
-            buttonStyle={[styles.inputStyle, {backgroundColor: '#1dd1a1'}]}
+            buttonStyle={[styles.inputStyle, {backgroundColor: '#07a97b'}]}
             title="LOG IN"
             titleStyle={{
               flex: 1,
@@ -32,7 +32,7 @@ class Signup extends Component {
                 style={{
                   marginRight: 5,
                   borderRadius: Platform.OS === 'ios' ? 15 : 20,
-                  backgroundColor: '#10ac84',
+                  backgroundColor: '#078b66',
                   paddingHorizontal: 8,
                   paddingVertical: 6,
                   overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
@@ -60,7 +60,7 @@ class Signup extends Component {
                 style={{
                   marginRight: 5,
                   borderRadius: Platform.OS === 'ios' ? 15 : 20,
-                  backgroundColor: '#7272fb',
+                  backgroundColor: '#6969e5',
                   color: '#fff',
                   paddingHorizontal: 8,
                   paddingVertical: 6,
