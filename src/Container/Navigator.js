@@ -67,9 +67,9 @@ const AuthStack = createStackNavigator(
         marginTop: '18%',
       },
       headerLeftContainerStyle: {
-         width: 80,
+        width: 80,
         alignItems: 'flex-end',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
       },
     },
   },

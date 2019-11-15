@@ -17,7 +17,8 @@ class AuthMain extends Component {
         
           <Button
             TouchableComponent={TouchableOpacity}
-            buttonStyle={[styles.inputStyle, {backgroundColor: '#1dd1a1'}]}
+            containerStyle={styles.shadow}
+            buttonStyle={[styles.buttonStyle, {backgroundColor: '#07a97b'}]}
             title="LOG IN"
             titleStyle={{
               flex: 1,
@@ -33,7 +34,7 @@ class AuthMain extends Component {
                 style={{
                   marginRight: 5,
                   borderRadius: Platform.OS === 'ios' ? 15 : 20,
-                  backgroundColor: '#10ac84',
+                  backgroundColor: '#078b66',
                   paddingHorizontal: 8,
                   paddingVertical: 6,
                   overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
@@ -44,7 +45,7 @@ class AuthMain extends Component {
           />
          
           <Button
-            buttonStyle={[styles.inputStyle, {backgroundColor: '#7272fb'}]}
+            buttonStyle={[styles.buttonStyle, {backgroundColor: '#7272fb'}]}
             TouchableComponent={TouchableOpacity}
             title="SIGN UP"
             titleStyle={{
@@ -61,7 +62,7 @@ class AuthMain extends Component {
                 style={{
                   marginRight: 5,
                   borderRadius: Platform.OS === 'ios' ? 15 : 20,
-                  backgroundColor: '#7272fb',
+                  backgroundColor: '#6969e5',
                   color: '#fff',
                   paddingHorizontal: 8,
                   paddingVertical: 6,
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: 50,
   },
-  inputStyle: {
+  buttonStyle: {
     borderRadius: 15,
     marginHorizontal: 30,
     padding: 15,
