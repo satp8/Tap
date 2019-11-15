@@ -21,6 +21,7 @@ import AboutYou from './Screen/Auth/AboutYou';
 import SignUp from './Screen/Auth/SignUp';
 import OtpCode from './Screen/Auth/OtpCode';
 import NavigationService from './NavigationService';
+import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const AuthStack = createStackNavigator(
   {
@@ -38,15 +39,27 @@ const AuthStack = createStackNavigator(
     },
     ForgotPassword: {
       screen: ForgotPassword,
+      navigationOptions : {
+        title : 'Forgot Password'
+      }
     },
     OtpCode: {
       screen: OtpCode,
+      navigationOptions : {
+        title : 'Enter Code'
+      }
     },
     ResetPassowrd: {
       screen: ResetPassword,
+      navigationOptions : {
+        title : 'Reset Password'
+      }
     },
     AboutYou: {
       screen: AboutYou,
+      navigationOptions : {
+        title : 'About You'
+      }
     },
     SignUp: {
       screen: SignUp,
@@ -55,7 +68,26 @@ const AuthStack = createStackNavigator(
   {
     initialRouteName: 'AuthMain',
     headerLayoutPreset: 'center',
-    defaultNavigationOptions: {
+    defaultNavigationOptions: ({navigation})  => ({
+      headerLeft: () => {
+        //   return <Icon name="arrow-left-box" size={35}  color="#fff"/>;
+        return (
+          <Icon
+            name="arrow-left"
+            size={16}
+            color="white"
+            onPress={() => navigation.goBack()}
+            style={{
+              marginRight: 5,
+              borderRadius: Platform.OS === 'ios' ? 15 : 10,
+              backgroundColor: 'rgb(97,97,116)',
+              paddingHorizontal: 8,
+              paddingVertical: 6,
+              overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
+            }}
+          />
+        );
+      },
       headerStyle: {
         backgroundColor: '#1f1f39',
         height: 80,
@@ -71,7 +103,7 @@ const AuthStack = createStackNavigator(
         alignItems: 'flex-end',
         justifyContent: 'center',
       },
-    },
+    }),
   },
 );
 const AppStack = createStackNavigator(

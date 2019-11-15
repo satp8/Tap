@@ -13,34 +13,7 @@ export default class Login extends Component {
 
     this.state = {};
   }
-  static navigationOptions = {
-    // headerTitle instead of title
-    headerLeft: () => {
-      //   return <Icon name="arrow-left-box" size={35}  color="#fff"/>;
-      return (
-        <Icon
-          name="arrow-left"
-          size={16}
-          color="white"
-          style={{
-            marginRight: 5,
-            borderRadius: Platform.OS === 'ios' ? 15 : 10,
-            backgroundColor: 'rgb(97,97,116)',
-            paddingHorizontal: 8,
-            paddingVertical: 6,
-            overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
-          }}
-        />
-      );
-    },
-  };
-  
 
-
-
-
-
- 
  render() {
     return (
       <View style={styles.container}>
@@ -60,8 +33,16 @@ export default class Login extends Component {
         inputContainerStyle={{borderColor:'#1f1f39'}}
         placeholder='Your Password'
         placeholderTextColor={'#616174'}
+        
       />
-      <TouchableOpacity style={{position:'absolute', alignSelf:'flex-end', top: 25, right: 50}}>
+      <TouchableOpacity 
+      style={{position:'absolute', 
+      alignSelf:'flex-end', 
+        top: 25, 
+      right: 50}}
+      onPress={() => this.props.navigation.navigate('ForgotPassword')}
+      >
+          
       <Text style={{color:'#616174', fontWeight: 'bold'}}>FORGOT</Text>
       </TouchableOpacity>
       </View>
@@ -76,7 +57,7 @@ export default class Login extends Component {
               marginLeft: 30,
               fontWeight: 'bold',
             }}
-            onPress={() => this.props.navigation.navigate('AppStack')}
+            onPress={() => this.props.navigation.navigate('Home')}
             icon={
               <Icon
                 name="arrow-right"
