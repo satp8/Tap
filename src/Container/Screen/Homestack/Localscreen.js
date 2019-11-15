@@ -7,7 +7,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
-  
+  Platform
 } from 'react-native';
 import {
   widthPercentageToDP as wp,
@@ -91,7 +91,42 @@ class Localscreen extends Component {
         avatar: require('../../../assets/tomb_raider2.jpg'),
         subtitle: 'Action, Adventure',
       },
-  
+      {
+        id: 4,
+        name: 'junior Leagues',
+        avatar: require('../../../assets/cod2.jpg'),
+        subtitle: 'adventure',
+      },
+      {
+        id: 5,
+        name: 'Fallout76',
+        avatar: require('../../../assets/fallout.jpg'),
+        subtitle: 'RPG, Action, Adventure, Multiplayer',
+      },
+      {
+        id: 6,
+        name: 'Fallout76',
+        avatar: require('../../../assets/fallout.jpg'),
+        subtitle: 'RPG, Action, Adventure, Multiplayer',
+      },
+      {
+        id: 7,
+        name: 'junior Leagues',
+        avatar: require('../../../assets/red_dead.jpg'),
+        subtitle: 'adventure',
+      },
+      {
+        id: 8,
+        name: 'junior Leagues',
+        avatar: require('../../../assets/red_dead.jpg'),
+        subtitle: 'adventure',
+      },
+      {
+        id: 9,
+        name: 'junior Leagues',
+        avatar: require('../../../assets/red_dead.jpg'),
+        subtitle: 'adventure',
+      },
     ];
 
     const Data3 = [
@@ -202,123 +237,50 @@ class Localscreen extends Component {
             </TouchableOpacity>
           </View>
 
-          {/* <ScrollView horizontal showsHorizontalScrollIndicator={false}> */}
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{marginLeft:wp('5%')}}>
             <View
               style={[
                 styles.container,
                 {
                   // flexDirection: 'column',
                   marginBottom: hp('5%'),
-                  marginLeft: hp('2%'), 
+                  // marginLeft: hp('2%'), 
+                  // marginRight : hp("15%")
+                  // width : "200%"
                 },
               ]}>
-          {/* <ScrollView horizontal showsHorizontalScrollIndicator={false}> */}
               <FlatList
-                // numColumns={Data2.length / 2}
+                numColumns={Data2.length/3}
                 // ItemSeparatorComponent={this.renderSeparator}
-                pagingEnabled={true}
                 key={Math.random()}
                 data={Data2}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                keyExtractor={(item, index) => item.id} 
+                keyExtractor={(item, index) => item.id}
                 renderItem={({item}) => (
-                  <View>
-                  <View style={{marginRight: 25}}>
-                  <View style={[styles.heroImageContainertertiary]}>
+                  <View
+                    style={styles.heroImageContainertertiary}>
                     <Image
                       source={item.avatar}
                       style={styles.heroImagetertiary}
                     />
-                    <View style={{marginTop: hp('2%')}}>
-                      <Text style={{color: '#fff'}}>
-                        {item.name}
+                    <View style={{ marginTop: hp('2%') }}> 
+                      <Text style={{ color: '#fff' }}>
+                        Shadow of the Tomb Raider
                       </Text>
-                      <Text style={{color: '#747d8c',fontSize:12}}>{item.subtitle}</Text>
+                      <Text style={{ color: '#747d8c' }}>Adventure</Text>
+                      <View  style={{  
+                height: 1,  
+                width: "150%",
+                marginLeft : -75,  
+                backgroundColor: "#535c68",  
+                marginTop : Platform.OS === 'ios' ? 35 : 25 
+            }}  ></View>
                     </View>
-                  </View>
-                </View>
-                </View>
-                  
-                )}
-              />
-              <View style={{               
-                    height: 1,  
-                    width: "100%",
-                    marginLeft : 5,  
-                    backgroundColor: "#535c68",  
-                    marginTop : 10}}>
-                </View>
-                    <FlatList
-                // numColumns={Data2.length / 2}
-                // ItemSeparatorComponent={this.renderSeparator}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                key={Math.random()}
-                data={Data3}
-                keyExtractor={(item, index) => item.id} 
-                renderItem={({item}) => (
-                  <View>
-                  <View  style={{marginRight:10}}>
-                  <View style={styles.heroImageContainertertiary}>
-                    <Image
-                      source={item.avatar}
-                      style={styles.heroImagetertiary}
-                    />
-                    <View style={{marginTop: hp('2%')}}>
-                      <Text style={{color: '#fff'}}>
-                        {item.name}
-                      </Text>
-                      <Text style={{color: '#747d8c',fontSize:12}}>{item.subtitle}</Text>
-                    </View>
-                  </View>
-                  </View>
                   </View>
                 )}
               />
-               <View style={{               
-                    height: 1.2,  
-                    width: "100%",
-                    marginLeft : 5,  
-                    backgroundColor: "#535c68",  
-                    marginTop : 10}}>
-                  </View>
-                    <FlatList
-                // numColumns={Data2.length / 2}
-                // ItemSeparatorComponent={this.renderSeparator}
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                key={Math.random()}
-                data={Data4}
-                keyExtractor={(item, index) => item.id} 
-                renderItem={({item}) => (
-                  <View>
-                  <View  style={{marginRight:74}}>
-                  <View style={styles.heroImageContainertertiary}>
-                    <Image
-                      source={item.avatar}
-                      style={styles.heroImagetertiary}
-                    />
-                    <View style={{marginTop: hp('2%')}}>
-                      <Text style={{color: '#fff'}}>
-                        {item.name}
-                      </Text>
-                      <Text style={{color: '#747d8c',fontSize:12}}>{item.subtitle}</Text>
-                    </View>
-                  </View>
-                  </View>
-                  </View>
-                )}
-              />
-                 <View style={{               
-                    height: 1,  
-                    width: "100%",
-                    marginLeft : 5,  
-                    backgroundColor: "#535c68",  
-                    marginTop : 10}}>
-                  </View>
+      
             </View>
-          {/* </ScrollView> */}
+          </ScrollView>
         </ScrollView>
       </View>
     );
@@ -377,22 +339,23 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     color: '#fff',
-    marginLeft: wp('3%'),
-    marginTop: hp('2%'),
+    marginLeft: wp('2.5%'),
+    marginTop: hp('2.5%'),
   },
   secondaryPostBody: {
     textAlign: 'left',
     fontSize: 13,
     color: '#747d8c',
-    marginLeft: wp('3%'),
+    marginLeft: wp('2.5%'),
     marginTop: hp('1.5%'),
     marginRight: wp('5%'),
   },
   heroImageContainertertiary: {
-    marginLeft: wp('2%'),
-    marginRight: wp('5%'),
+    // marginLeft: wp('2%'),
+    marginRight: wp('10%'),
     flexDirection: 'row',
     marginTop: hp('2.5%'),
+    
   },
   heroImagetertiary: {
     width: wp('20%'),
