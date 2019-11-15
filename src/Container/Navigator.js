@@ -16,39 +16,64 @@ import LeftMenu from './LeftMenu';
 import Auth from './Screen/Auth/Authscreen';
 import Login from './Screen/Auth/Login';
 import ResetPassword from './Screen/Auth/ResetPassword';
-import ForgotPassword from './Screen/Auth/ForgotPassword'
+import ForgotPassword from './Screen/Auth/ForgotPassword';
 import AboutYou from './Screen/Auth/AboutYou';
 import SignUp from './Screen/Auth/SignUp';
 import OtpCode from './Screen/Auth/OtpCode';
 import NavigationService from './NavigationService';
 
-
-const AuthStack = createStackNavigator({
-  AuthMain: {
-    screen: Auth,
-    navigationOptions : {
-      header : null
-    }
+const AuthStack = createStackNavigator(
+  {
+    AuthMain: {
+      screen: Auth,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    Login: {
+      screen: Login,
+      navigationOptions: {
+        title: 'Log In',
+      },
+    },
+    ForgotPassword: {
+      screen: ForgotPassword,
+    },
+    OtpCode: {
+      screen: OtpCode,
+    },
+    ResetPassowrd: {
+      screen: ResetPassword,
+    },
+    AboutYou: {
+      screen: AboutYou,
+    },
+    SignUp: {
+      screen: SignUp,
+    },
   },
-  Login: {
-    screen: Login,
+  {
+    initialRouteName: 'AuthMain',
+    headerLayoutPreset: 'center',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#1f1f39',
+        height: 80,
+        elevation: 0,
+        borderBottomWidth: 0,
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        marginTop: '18%',
+      },
+      headerLeftContainerStyle: {
+         width: 80,
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+      },
+    },
   },
-  ForgotPassword: {
-    screen: ForgotPassword,
-  },
-  OtpCode: {
-    screen: OtpCode,
-  },
-  ResetPassowrd: {
-    screen: ResetPassword,
-  },
-  AboutYou: {
-    screen: AboutYou,
-  },
-  SignUp: {
-    screen: SignUp,
-  },
-});
+);
 const AppStack = createStackNavigator(
   {
     Home: {

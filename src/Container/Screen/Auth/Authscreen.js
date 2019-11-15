@@ -24,7 +24,7 @@ class AuthMain extends Component {
               marginLeft: 30,
               fontWeight: 'bold',
             }}
-            onPress={() => this.props.navigation.navigate('AppStack')}
+            onPress={() => this.props.navigation.navigate('Login')}
             icon={
               <Icon
                 name="arrow-right"
