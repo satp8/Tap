@@ -42,7 +42,7 @@ const AuthStack = createStackNavigator(
     OtpCode: {
       screen: OtpCode,
     },
-    ResetPassowrd: {
+    ResetPassword: {
       screen: ResetPassword,
     },
     AboutYou: {
@@ -53,7 +53,7 @@ const AuthStack = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'AuthMain',
+    initialRouteName: 'OtpCode',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: {
       headerStyle: {
