@@ -21,12 +21,20 @@ import AboutYou from './Screen/Auth/AboutYou';
 import SignUp from './Screen/Auth/SignUp';
 import OtpCode from './Screen/Auth/OtpCode';
 import NavigationService from './NavigationService';
+<<<<<<< HEAD
 import Create_Wallet from './Screen/Auth/Wallet/Ceate_wallet';
 import Wallet_initial from './Screen/Auth/Wallet/Wallet_initial';
 import Create_new_wallet from './Screen/Auth/Wallet/Create_new_wallet';
 import Wallet_congratulation from './Screen/Auth/Wallet/Wallet_congratulation';
 
 
+=======
+import Icon from 'react-native-vector-icons/FontAwesome5'
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+>>>>>>> 97590fd6d925cedb369616bf405e53d794bf915f
 const AuthStack = createStackNavigator(
   {
     AuthMain: {
@@ -43,18 +51,33 @@ const AuthStack = createStackNavigator(
     },
     ForgotPassword: {
       screen: ForgotPassword,
+      navigationOptions : {
+        title : 'Forgot Password'
+      }
     },
     OtpCode: {
       screen: OtpCode,
+      navigationOptions : {
+        title : 'Enter Code'
+      }
     },
-    ResetPassword: {
+    ResetPassowrd: {
       screen: ResetPassword,
+      navigationOptions : {
+        title : 'Reset Password'
+      }
     },
     AboutYou: {
       screen: AboutYou,
+      navigationOptions : {
+        title : 'About You'
+      }
     },
     SignUp: {
       screen: SignUp,
+      navigationOptions : {
+        title : 'Sign Up'
+      }
     },
     Wallet_initial: {
       screen: Wallet_initial
@@ -70,9 +93,32 @@ const AuthStack = createStackNavigator(
     }
   },
   {
+<<<<<<< HEAD
     initialRouteName: 'Create_new_wallet',
+=======
+    initialRouteName: 'AuthMain',
+>>>>>>> 97590fd6d925cedb369616bf405e53d794bf915f
     headerLayoutPreset: 'center',
-    defaultNavigationOptions: {
+    defaultNavigationOptions: ({navigation})  => ({
+      headerLeft: () => {
+        //   return <Icon name="arrow-left-box" size={35}  color="#fff"/>;
+        return (
+          <Icon
+            name="arrow-left"
+            size={16}
+            color="white"
+            onPress={() => navigation.goBack()}
+            style={{
+              marginRight: 5,
+              borderRadius: Platform.OS === 'ios' ? 15 : 10,
+              backgroundColor: 'rgb(97,97,116)',
+              paddingHorizontal: 8,
+              paddingVertical: 6,
+              overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
+            }}
+          />
+        );
+      },
       headerStyle: {
         backgroundColor: '#1f1f39',
         height: 80,
@@ -87,8 +133,9 @@ const AuthStack = createStackNavigator(
         width: 80,
         alignItems: 'flex-end',
         justifyContent: 'center',
+        marginHorizontal: wp('2%'),
       },
-    },
+    }),
   },
 );
 const AppStack = createStackNavigator(

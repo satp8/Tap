@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import {View, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import { Input, Button } from 'react-native-elements';
@@ -7,11 +6,9 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-
 export default class OtpCode extends Component {
   constructor(props) {
     super(props);
-
     this.state = {};
   }
   static navigationOptions = {

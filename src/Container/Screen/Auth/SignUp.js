@@ -14,29 +14,7 @@ export default class SignUp extends Component {
 
     this.state = {};
   }
-  static navigationOptions = {
-    // headerTitle instead of title
-    headerLeft: () => {
-      //   return <Icon name="arrow-left-box" size={35}  color="#fff"/>;
-      return (
-        <Icon
-          name="arrow-left"
-          size={16}
-          color="white"
-          style={{
-            marginRight: 5,
-            borderRadius: Platform.OS === 'ios' ? 15 : 10,
-            backgroundColor: 'rgb(97,97,116)',
-            paddingHorizontal: 8,
-            paddingVertical: 6,
-            overflow: Platform.OS === 'ios' ? 'hidden' : 'visible',
-          }}
-        />
-      );
-    },
-  };
-  
- render() {
+render() {
     return (
       <View style={styles.container}>
       <View style={styles.titleContainer}>
@@ -66,6 +44,7 @@ export default class SignUp extends Component {
       </View>
       <Button
             buttonStyle={[styles.buttonStyle, {backgroundColor: '#7272fb'}]}
+            onPress={() => this.props.navigation.navigate('AboutYou')}
             TouchableComponent={TouchableOpacity}
             title="SIGN UP"
             titleStyle={{
