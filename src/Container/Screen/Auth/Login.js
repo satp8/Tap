@@ -7,13 +7,13 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {};
   }
-
  render() {
     return (
       <View style={styles.container}>

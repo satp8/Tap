@@ -66,10 +66,13 @@ const AuthStack = createStackNavigator(
     },
     SignUp: {
       screen: SignUp,
+      navigationOptions : {
+        title : 'Sign Up'
+      }
     },
   },
   {
-    initialRouteName: 'AboutYou',
+    initialRouteName: 'AuthMain',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: ({navigation})  => ({
       headerLeft: () => {
@@ -105,7 +108,6 @@ const AuthStack = createStackNavigator(
         width: 80,
         alignItems: 'flex-end',
         justifyContent: 'center',
-  
         marginHorizontal: wp('2%'),
       },
     }),
