@@ -8,7 +8,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-export default class OtpCode extends Component {
+export default class Create_new_wallet extends Component {
   constructor(props) {
     super(props);
 
@@ -35,49 +35,32 @@ export default class OtpCode extends Component {
       );
     },
   };
-  
+   
  render() {
     return (
       <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={ styles.title }> Verify the code to get access to reset the password</Text>
+        <Text style={ styles.title }>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
       </View>
-     <View style={{marginTop: 50, flexDirection:'row',width:80,marginLeft: 20, marginRight: 10, alignItems:'center'}}>
+     <View style={{marginTop: 50}}>
       <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
+        inputStyle={[styles.inputStyle, {borderTopLeftRadius: 20, borderTopRightRadius: 20 }]}
         inputContainerStyle={{borderColor:'#1f1f39'}}
-        placeholderTextColor={'#616174'}
-        maxLength={1}
-        keyboardType='number-pad'
-      />
-       <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
-        inputContainerStyle={{borderColor:'#1f1f39'}}
+        placeholder='Wallet Name'
         placeholderTextColor={'#616174'}
       />
-      <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
-        inputContainerStyle={{borderColor:'#1f1f39'}}
-        placeholderTextColor={'#616174'}
-      />
-      <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
-        inputContainerStyle={{borderColor:'#1f1f39'}}
-        placeholderTextColor={'#616174'}
-      />
-      
       </View>
       <Button
             TouchableComponent={TouchableOpacity}
             containerStyle={styles.shadow}
             buttonStyle={[styles.buttonStyle, {backgroundColor: '#07a97b'}]}
-            title="VERIFY"
+            title="Create Wallet"
             titleStyle={{
               flex: 1,
               marginLeft: 30,
               fontWeight: 'bold',
             }}
-            onPress={() => this.props.navigation.navigate('AppStack')}
+            onPress={() => this.props.navigation.navigate('Wallet_congratulation')}
             icon={
               <Icon
                 name="arrow-right"
@@ -112,21 +95,20 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     textAlign: 'center',
-    marginHorizontal: wp('11%'),
+    marginHorizontal: wp('10%'),
     marginTop: 10,
-    lineHeight: 30,
-    color: '#fff'
+    lineHeight: 35,
+    color: '#fff',
+    fontWeight: 'bold'
   },
   inputStyle: {
-    flex:1,
-    // alignItems: 'center',
-    // justifyContent:'center',
-    // alignContent:'center',
+    // flex:1,
+    alignItems: 'center',
     backgroundColor: '#35355d',
     borderColor: '#1f1f39',
     padding: 20,
     color: '#fff',
-    // marginHorizontal: wp('5%')
+    marginHorizontal: wp('5%')
   },
   buttonStyle: {
     borderRadius: 15,

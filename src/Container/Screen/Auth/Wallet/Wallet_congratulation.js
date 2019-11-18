@@ -8,7 +8,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-export default class OtpCode extends Component {
+export default class Wallet_congratulation extends Component {
   constructor(props) {
     super(props);
 
@@ -35,43 +35,20 @@ export default class OtpCode extends Component {
       );
     },
   };
-  
+   
  render() {
     return (
       <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={ styles.title }> Verify the code to get access to reset the password</Text>
-      </View>
-     <View style={{marginTop: 50, flexDirection:'row',width:80,marginLeft: 20, marginRight: 10, alignItems:'center'}}>
-      <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
-        inputContainerStyle={{borderColor:'#1f1f39'}}
-        placeholderTextColor={'#616174'}
-        maxLength={1}
-        keyboardType='number-pad'
-      />
-       <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
-        inputContainerStyle={{borderColor:'#1f1f39'}}
-        placeholderTextColor={'#616174'}
-      />
-      <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
-        inputContainerStyle={{borderColor:'#1f1f39'}}
-        placeholderTextColor={'#616174'}
-      />
-      <Input
-        inputStyle={[styles.inputStyle,{borderRadius:20}]}
-        inputContainerStyle={{borderColor:'#1f1f39'}}
-        placeholderTextColor={'#616174'}
-      />
-      
+        <Text style={ [styles.title,{color:'#07a97b'}] }>Congratulations</Text>
+        <Text style={ styles.title }>Your wallet has been</Text>
+        <Text style={ styles.title }>successfully created.</Text>
       </View>
       <Button
             TouchableComponent={TouchableOpacity}
             containerStyle={styles.shadow}
             buttonStyle={[styles.buttonStyle, {backgroundColor: '#07a97b'}]}
-            title="VERIFY"
+            title="GET STARTED"
             titleStyle={{
               flex: 1,
               marginLeft: 30,
@@ -108,25 +85,24 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     justifyContent: 'flex-start',
+    marginTop: 20
   },
   title: {
     fontSize: 20,
-    textAlign: 'center',
-    marginHorizontal: wp('11%'),
+    marginHorizontal: wp('10%'),
     marginTop: 10,
     lineHeight: 30,
-    color: '#fff'
+    color: '#fff',
+    fontWeight: 'bold'
   },
   inputStyle: {
-    flex:1,
-    // alignItems: 'center',
-    // justifyContent:'center',
-    // alignContent:'center',
+    // flex:1,
+    alignItems: 'center',
     backgroundColor: '#35355d',
     borderColor: '#1f1f39',
     padding: 20,
     color: '#fff',
-    // marginHorizontal: wp('5%')
+    marginHorizontal: wp('5%')
   },
   buttonStyle: {
     borderRadius: 15,

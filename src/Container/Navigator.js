@@ -11,7 +11,7 @@ import PlayerLocating from './Screen/PlayerLocating/PlayerLocating';
 import Settings from './Screen/Settings/Settings';
 import TokenWallet from './Screen/TokenWallet/TokenWallet';
 import PulseEsports from './Screen/PulseEsportsLeague/PulseEsports';
-import BrowseTournaments from './Screen/BrowseTournaments/BrowseTournaments';
+import BrowseTournaments from './Screen/BrowseTournaments/Mytournament';
 import LeftMenu from './LeftMenu';
 import Auth from './Screen/Auth/Authscreen';
 import Login from './Screen/Auth/Login';
@@ -21,6 +21,11 @@ import AboutYou from './Screen/Auth/AboutYou';
 import SignUp from './Screen/Auth/SignUp';
 import OtpCode from './Screen/Auth/OtpCode';
 import NavigationService from './NavigationService';
+import Create_Wallet from './Screen/Auth/Wallet/Ceate_wallet';
+import Wallet_initial from './Screen/Auth/Wallet/Wallet_initial';
+import Create_new_wallet from './Screen/Auth/Wallet/Create_new_wallet';
+import Wallet_congratulation from './Screen/Auth/Wallet/Wallet_congratulation';
+
 
 const AuthStack = createStackNavigator(
   {
@@ -51,9 +56,21 @@ const AuthStack = createStackNavigator(
     SignUp: {
       screen: SignUp,
     },
+    Wallet_initial: {
+      screen: Wallet_initial
+    },
+    Create_Wallet: {
+      screen: Create_Wallet
+    },
+    Create_new_wallet: {
+      screen: Create_new_wallet
+    },
+    Wallet_congratulation: {
+      screen: Wallet_congratulation
+    }
   },
   {
-    initialRouteName: 'OtpCode',
+    initialRouteName: 'Create_new_wallet',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: {
       headerStyle: {
@@ -102,11 +119,11 @@ const AppStack = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'PulseEsports',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#2C3A47',
+        backgroundColor: '#1f1f39',
         elevation: 0,
         borderBottomWidth: 0,
       },
@@ -130,7 +147,7 @@ const AppSwitch = createSwitchNavigator(
     },
   },
   {
-    initialRouteName: 'Auth',
+    initialRouteName: 'AppStack',
   },
 );
 export const drawer = createRef();
