@@ -46,6 +46,7 @@ class AuthMain extends Component {
          
           <Button
             buttonStyle={[styles.buttonStyle, {backgroundColor: '#7272fb'}]}
+            onPress={() => this.props.navigation.navigate('SignUp')}
             TouchableComponent={TouchableOpacity}
             title="SIGN UP"
             titleStyle={{

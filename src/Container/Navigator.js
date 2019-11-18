@@ -22,7 +22,10 @@ import SignUp from './Screen/Auth/SignUp';
 import OtpCode from './Screen/Auth/OtpCode';
 import NavigationService from './NavigationService';
 import Icon from 'react-native-vector-icons/FontAwesome5'
-
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 const AuthStack = createStackNavigator(
   {
     AuthMain: {
@@ -66,7 +69,7 @@ const AuthStack = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'AuthMain',
+    initialRouteName: 'AboutYou',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: ({navigation})  => ({
       headerLeft: () => {
@@ -102,6 +105,8 @@ const AuthStack = createStackNavigator(
         width: 80,
         alignItems: 'flex-end',
         justifyContent: 'center',
+  
+        marginHorizontal: wp('2%'),
       },
     }),
   },
