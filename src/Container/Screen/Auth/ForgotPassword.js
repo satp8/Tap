@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import React, { Component } from 'react'
-import {Text} from 'react-native'
-export default class ForgotPassword extends Component {
-  render() {
-    return (
-      <Text>ForgotPassword</Text>
-    )
-  }
-}
-=======
 import React, {Component} from 'react';
-
-import {View, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView, Text} from 'react-native';
+import {View, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView, Text} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import { Input, Button } from 'react-native-elements';
 import {
@@ -105,4 +93,3 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
 })
->>>>>>> 97590fd6d925cedb369616bf405e53d794bf915f

@@ -11,7 +11,7 @@ import PlayerLocating from './Screen/PlayerLocating/PlayerLocating';
 import Settings from './Screen/Settings/Settings';
 import TokenWallet from './Screen/TokenWallet/TokenWallet';
 import PulseEsports from './Screen/PulseEsportsLeague/PulseEsports';
-import BrowseTournaments from './Screen/BrowseTournaments/Mytournament';
+import BrowseTournaments from './Screen/BrowseTournaments/Globaltournaments';
 import LeftMenu from './LeftMenu';
 import Auth from './Screen/Auth/Authscreen';
 import Login from './Screen/Auth/Login';
@@ -21,20 +21,17 @@ import AboutYou from './Screen/Auth/AboutYou';
 import SignUp from './Screen/Auth/SignUp';
 import OtpCode from './Screen/Auth/OtpCode';
 import NavigationService from './NavigationService';
-<<<<<<< HEAD
 import Create_Wallet from './Screen/Auth/Wallet/Ceate_wallet';
 import Wallet_initial from './Screen/Auth/Wallet/Wallet_initial';
 import Create_new_wallet from './Screen/Auth/Wallet/Create_new_wallet';
 import Wallet_congratulation from './Screen/Auth/Wallet/Wallet_congratulation';
 
 
-=======
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
->>>>>>> 97590fd6d925cedb369616bf405e53d794bf915f
 const AuthStack = createStackNavigator(
   {
     AuthMain: {
@@ -61,7 +58,7 @@ const AuthStack = createStackNavigator(
         title : 'Enter Code'
       }
     },
-    ResetPassowrd: {
+    ResetPassword: {
       screen: ResetPassword,
       navigationOptions : {
         title : 'Reset Password'
@@ -93,11 +90,7 @@ const AuthStack = createStackNavigator(
     }
   },
   {
-<<<<<<< HEAD
-    initialRouteName: 'Create_new_wallet',
-=======
-    initialRouteName: 'AuthMain',
->>>>>>> 97590fd6d925cedb369616bf405e53d794bf915f
+    initialRouteName: 'Wallet_congratulation',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: ({navigation})  => ({
       headerLeft: () => {
@@ -166,7 +159,7 @@ const AppStack = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'PulseEsports',
+    initialRouteName: 'PlayerLocating',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: {
       headerStyle: {

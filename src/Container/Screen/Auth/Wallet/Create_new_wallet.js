@@ -44,7 +44,7 @@ export default class Create_new_wallet extends Component {
       </View>
      <View style={{marginTop: 50}}>
       <Input
-        inputStyle={[styles.inputStyle, {borderTopLeftRadius: 20, borderTopRightRadius: 20 }]}
+        inputStyle={[styles.inputStyle, {borderRadius: 20 }]}
         inputContainerStyle={{borderColor:'#1f1f39'}}
         placeholder='Wallet Name'
         placeholderTextColor={'#616174'}
