@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {View, TouchableOpacity, StyleSheet, ImageBackground, SafeAreaView, Text} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import { Input, Button } from 'react-native-elements';
