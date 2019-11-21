@@ -175,7 +175,8 @@ export default class PulseEsports extends Component {
           keyExtractor={item => item.id}
         />}
 
-        { this.state.name === 'League standings' && <FlatList
+        { this.state.name === 'League standings' && 
+         <FlatList
           showsHorizontalScrollIndicator={false}
           ItemSeparatorComponent={this.renderSeparator}
           data={Data2}
@@ -213,14 +214,32 @@ export default class PulseEsports extends Component {
           ItemSeparatorComponent={this.renderSeparator}
           data={Data3}
           renderItem={({item}) => (
+            <View style={{flexDirection:'row'}}>
+            <View style={{marginLeft:20,marginTop:20}}>
+                <Text style={{color:'#6969e1'}}>15</Text>
+                <Text style={{color:'#fff'}}>Sept</Text>
+            </View>
+            <View style={{width:1,
+                height:'50%', 
+                backgroundColor: "#8292a7",
+                marginLeft:30,
+                marginRight: 10,
+                top:35
+                }}>
+              <View style={{padding:5,backgroundColor:'#07a97b',position:'absolute',alignSelf:'center',borderRadius:20}}>
+              <View style={{padding:3,backgroundColor:'#1f1f39',alignSelf:'center',borderRadius:20}}></View>
+              </View>
+              <View style={{padding:5,backgroundColor:'#07a97b',position:'absolute',alignSelf:'center',bottom:0,borderRadius:20}}>
+              <View style={{padding:3,backgroundColor:'#1f1f39',alignSelf:'center',borderRadius:20,bottom:0}}></View>
+              </View>
+          </View>
           <View style={[styles.team,{flexDirection:'column'}]}>
-          {/* <Timeline data={Data3} innerCircle={'dot'} /> */}
           <View style={{flexDirection:'row',marginBottom:20}}>
           <Image source={item.avatar1} style={{width:40,height:40,borderRadius:10,marginLeft:15}}/>
           <View style={{marginLeft:15,justifyContent:'center'}}>
-          <Text style={{color:'#fff',marginBottom:5,fontSize:18}}>{item.name1}</Text>
+          <Text style={{color:'#fff',marginBottom:5,fontSize:16}}>{item.name1}</Text>
           </View>
-          <View style={{justifyContent:'center',left:120}}>
+          <View style={{justifyContent:'center',marginLeft:50}}>
           <Text style={{color:'#8292a7',fontSize:15}}>5</Text>
           </View>
           </View>
@@ -228,10 +247,14 @@ export default class PulseEsports extends Component {
           <View style={{flexDirection:'row'}}>
           <Image source={item.avatar2} style={{width:40,height:40,borderRadius:10,marginLeft:15}}/>
           <View style={{marginLeft:15,justifyContent:'center'}}>
-          <Text style={{color:'#fff',marginBottom:5,fontSize:18}}>{item.name2}</Text>
+          <Text style={{color:'#fff',marginBottom:5,fontSize:16}}>{item.name2}</Text>
           </View>
-          <View style={{justifyContent:'center',left:120}}>
+          <View style={{justifyContent:'center',marginLeft:50}}>
           <Text style={{color:'#07a97b',fontSize:15}}>6</Text>
+          </View>
+          </View>
+          <View style={{flexDirection:'row',marginLeft:15,marginTop:10}}>
+           <Text style={{color:'#8292a7',fontSize:13}}>ESL Pro League 57</Text>
           </View>
           </View>
           </View>

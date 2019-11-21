@@ -7,7 +7,7 @@ import ScalingDrawer from 'react-native-scaling-drawer';
 import Home from './Screen/Homestack/Home';
 import Profile from './Screen/Profile/Profile';
 import Logout from './Screen/Logout/Logout';
-import PlayerLocating from './Screen/PlayerLocating/PlayerLocating';
+import PlayerLocating from './Screen/PlayerLocating/ReserveCoach';
 import Settings from './Screen/Settings/Settings';
 import TokenWallet from './Screen/TokenWallet/TokenWallet';
 import PulseEsports from './Screen/PulseEsportsLeague/PulseEsports';
@@ -25,8 +25,8 @@ import Create_Wallet from './Screen/Auth/Wallet/Ceate_wallet';
 import Wallet_initial from './Screen/Auth/Wallet/Wallet_initial';
 import Create_new_wallet from './Screen/Auth/Wallet/Create_new_wallet';
 import Wallet_congratulation from './Screen/Auth/Wallet/Wallet_congratulation';
-
-
+import Reservecoach from './Screen/PlayerLocating/ReserveCoach';
+import League from './Screen/MyLeague/LeagueTable';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import {
   widthPercentageToDP as wp,
@@ -87,10 +87,11 @@ const AuthStack = createStackNavigator(
     },
     Wallet_congratulation: {
       screen: Wallet_congratulation
-    }
+    },
+   
   },
   {
-    initialRouteName: 'Wallet_congratulation',
+    initialRouteName: 'AuthMain',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: ({navigation})  => ({
       headerLeft: () => {
@@ -157,9 +158,12 @@ const AppStack = createStackNavigator(
     Logout: {
       screen: Logout,
     },
+    League: {
+      screen : League
+    }
   },
   {
-    initialRouteName: 'PlayerLocating',
+    initialRouteName: 'Profile',
     headerLayoutPreset: 'center',
     defaultNavigationOptions: {
       headerStyle: {

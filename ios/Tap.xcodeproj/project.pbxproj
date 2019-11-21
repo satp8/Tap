@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TapTests.m */; };
 		07A996CC3B210EF40C2DC620 /* libPods-Tap-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C67349AF30F1F418BA7596FF /* libPods-Tap-tvOSTests.a */; };
